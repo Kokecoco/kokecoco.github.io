@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="taskForm">
+            <input type="text" id="titleInput" placeholder="Title" required>
+            <textarea id="contentInput" placeholder="Content"></textarea>
+            <input type="datetime-local" id="deadlineInput" required>
+            <select id="priorityInput" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="taskList"></ul>
+    </div>
+    <button onclick="requestNotificationPermission()">Enable Notifications</button>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
